@@ -1,0 +1,1440 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #171717;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  /* background-color: ivory; */
+}
+
+
+
+
+
+/* ======================================================NavBar Code======================================================  */
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 12vh;
+  /* background-color: #fff; */
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 15px 0 hsla(0, 0%, 0%, 0.05);
+  backdrop-filter: blur(50px) !important;
+}
+
+.nav .nav-logo {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 15%;
+  align-items: center;
+  margin-left: 3%;
+  gap: 5%;
+  /* background-color: aqua; */
+}
+
+.nav .nav-logo h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.5vw;
+  word-spacing: 2%;
+}
+
+.nav .nav-logo span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #00b392;
+}
+
+.nav .nav-menu {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.nav .nav-menu h4 .Link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  font-style: normal;
+  font-size: 1vw;
+  transition: all .2s;
+}
+
+.nav .nav-menu h4 a:hover {
+  color: #009087;
+}
+
+.nav .nav-search {
+  position: relative;
+  height: 100%;
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav .nav-search .userinfo {
+  position: relative;
+  height: 100%;
+  width: 25%;
+  /* background-color: aqua; */
+  margin: 0 1% 0 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav .nav-search .userinfo img {
+  position: relative;
+  width: 30%;
+  height: 45%;
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.nav .nav-search .userinfo p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.9vw;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.nav .nav-search i {
+  position: relative;
+  font-size: 1.5vw;
+  margin-left: 5%;
+}
+
+.nav .nav-search h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1vw;
+  padding: 2%;
+}
+
+/* =============================================================================================================== */
+
+
+
+.home {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: snow;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  /* background-color: aliceblue; */
+}
+
+.hero img {
+  margin-top: 10px;
+  position: absolute;
+  width: 100%;
+  background-size: cover;
+}
+
+.hero .left {
+  position: relative;
+  height: 80%;
+  /* background-color: antiquewhite; */
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 3%;
+  align-items: center;
+}
+
+.hero .left h1 {
+  font-family: "Poppins", sans-serif;
+  width: 60%;
+  font-weight: 700;
+  margin-bottom: 2vh;
+  font-size: 3.2vw;
+  font-style: normal;
+}
+
+.hero .left h1 span {
+  /* color: #00b392; */
+  color: #ee4962;
+}
+
+.hero .left h3 {
+  font-family: "Poppins", sans-serif;
+  width: 60%;
+  font-weight: 500;
+  text-align: left;
+  font-size: 1vw;
+  margin-bottom: 2vh;
+  font-style: normal;
+}
+
+.button2 {
+  display: inline-block;
+  width: 20%;
+  height: 10%;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #343434;
+  /* padding: 0.7em 1.7em; */
+  cursor: pointer;
+  font-size: 1vw;
+  border-radius: 0.5em;
+  background: #00b392;
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.button2:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.button2:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #009087;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:hover {
+  color: #ffffff;
+  border: 1px solid #009087;
+}
+
+.button2:hover:before {
+  top: -35%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2:hover:after {
+  top: -45%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
+
+
+
+/* =============================================== */
+
+.hero .right {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  /* background-color: #fff; */
+}
+
+.hero .right .herobgimg {
+  position: absolute;
+  width: 90%;
+  /* height: 90%; */
+  left: 0;
+}
+
+.hero .right .heroimg {
+  position: relative;
+  width: 80%;
+  border-radius: 0% 25% 0% 25%;
+  /* border:2px solid #009087 ; */
+  padding: 2px;
+  transition: all 0.2s;
+}
+
+/* .hero .right .heroimg:hover{
+  border-radius: 25% 0% 25% 0%;
+} */
+
+/* =========================================================Hero Section End=============================================== */
+/* =========================================================Hero2 Section Start=============================================== */
+
+.hero2 {
+  position: relative;
+  margin-top: 5%;
+  width: 100%;
+  height: 100%;
+  /* background-color: saddlebrown; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero2 h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 5px;
+  font-size: 2.5vw;
+  font-style: normal;
+}
+
+.hero2 h1 span {
+  color: #ee4962;
+}
+
+.hero2 h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-style: normal;
+  color: gray;
+}
+
+.hero2 .features {
+  position: relative;
+  margin-top: 2vh;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2vw;
+}
+
+.hero2 .features .feature-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  justify-content: space-evenly;
+  background-color: #1ab79d1b;
+  border-radius: 2%;
+  gap: 2%;
+  width: 20%;
+  height: 48vh;
+  transition: all 0.5s;
+}
+
+.hero2 .features .feature-card:hover {
+  transform: scale(1.1);
+}
+
+.hero2 .features .feature-card:nth-child(2) {
+  background-color: #ee49621b;
+}
+
+.hero2 .features .feature-card:nth-child(3) {
+  background-color: #4461e41a;
+}
+
+.hero2 .features .feature-card:nth-child(4) {
+  background-color: #f8b72017;
+}
+
+.hero2 .features .feature-card:nth-child(5) {
+  background-color: #4461e41a;
+}
+
+.hero2 .features .feature-card:nth-child(n+6) {
+  background-color: #1ab79d1b;
+  /* Repeat the second color */
+}
+
+.hero2 .features .feature-card:nth-child(6n+7) {
+  background-color: #ee49621b;
+  /* Repeat the third color */
+}
+
+.hero2 .features .feature-card:nth-child(6n+8) {
+  background-color: #4461e41a;
+  /* Repeat the fourth color */
+}
+
+.hero2 .features .feature-card:nth-child(6n+9) {
+  background-color: #f8b72017;
+  /* Repeat the fifth color */
+}
+
+.hero2 .features .feature-card img {
+  position: relative;
+  padding: 2%;
+  width: 55%;
+  height: 45%;
+  border-radius: 50%;
+  background-size: contain;
+  background-position: top;
+  background-color: #1ab79d14;
+  margin-top: 5%;
+}
+
+.hero2 .features .feature-card:nth-child(2) img {
+  background-color: #ee49621b;
+  color: #ee4962;
+}
+
+.hero2 .features .feature-card:nth-child(3) img {
+  background-color: #4461e41a;
+  color: #4461e4f3;
+}
+
+.hero2 .features .feature-card:nth-child(4) img {
+  background-color: #f8b72017;
+  color: #f8b720e8;
+}
+
+.hero2 .features .feature-card:nth-child(5) img {
+  background-color: #4461e41a;
+  color: #4461e4fc;
+}
+
+.hero2 .features .feature-card h3 {
+  position: relative;
+  width: 80%;
+  text-decoration: bold;
+  text-align: center;
+  font-weight: 450;
+  font-size: 1.2vmax;
+  margin-top: 10px;
+}
+
+.hero2 .features .feature-card h4 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-weight: 200;
+  font-size: 1vmax;
+  margin-top: 10px;
+}
+
+.hero2 .features .feature-card h5 {
+  position: relative;
+  width: 40%;
+  height: max-content;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1vmax;
+  margin-top: 10px;
+  margin-bottom: 10%;
+  background-color: #1ab79d14;
+  color: #009087;
+
+}
+
+.hero2 .features .feature-card:nth-child(2) h5 {
+  background-color: #ee49621b;
+  color: #ee4962;
+}
+
+.hero2 .features .feature-card:nth-child(3) h5 {
+  background-color: #4461e41a;
+  color: #4461e4f3;
+}
+
+.hero2 .features .feature-card:nth-child(4) h5 {
+  background-color: #f8b72017;
+  color: #f8b720e8;
+}
+
+.hero2 .features .feature-card:nth-child(5) h5 {
+  background-color: #4461e41a;
+  color: #4461e4fc;
+}
+
+.hero2 .features .feature-card:nth-child(n+6) h5 {
+  color: #009087;
+  /* Repeat the second color */
+}
+
+.hero2 .features .feature-card:nth-child(6n+7) h5 {
+  color: #ee4962;
+  /* Repeat the third color */
+}
+
+.hero2 .features .feature-card:nth-child(6n+8) h5 {
+  background-color: #4461e41a;
+  color: #4461e4f3;
+  /* Repeat the fourth color */
+}
+
+.hero2 .features .feature-card:nth-child(6n+9) h5 {
+  background-color: #f8b72017;
+  color: #f8b720e8;
+  /* Repeat the fifth color */
+}
+
+
+.hero2 .morecourse {
+  position: relative;
+  margin-top: 5vh;
+  width: 10vmax;
+  height: 3vmax;
+  /* background-color:#ee4962; */
+  border-radius: 5px;
+  color: ivory;
+  border: none;
+  font-size: 1vmax;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(120deg, #FF204E, #5D0E41);
+
+}
+
+
+
+
+
+
+/* =====================================================Hero3 Starts Here=============================================== */
+
+.hero3 {
+  position: relative;
+  margin-top: 3%;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ivory;
+  justify-content: space-between;
+}
+
+.hero3 .left {
+  position: relative;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+}
+
+.hero3 .left .bgimg {
+  position: relative;
+  width: 80%;
+  height: 100%;
+}
+
+.hero3 .right {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero3 .right h4 {
+  position: relative;
+  width: 60%;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1vmax;
+  margin-top: 10px;
+}
+
+.hero3 .right h1 {
+  width: 60%;
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 5px;
+  font-size: 2.5vw;
+  /* line-height:3.5vmax; */
+  font-style: normal;
+}
+
+.hero3 .right h3 {
+  width: 60%;
+  font-weight: 450;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  letter-spacing: 2px;
+  font-size: 1.1vw;
+  font-style: normal;
+}
+
+.hero3 .right h1 span {
+  color: #ee4962;
+}
+
+.hero3 .right .tagline {
+  position: relative;
+  display: flex;
+  width: 60%;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+.hero3 .right .tagline i {
+  position: relative;
+  font-size: 2vw;
+  color: #00b392;
+}
+
+.hero3 .right .tagline h3 {
+  width: 100%;
+  /* height: max-content; */
+  font-weight: 350;
+  margin-top: 2%;
+  letter-spacing: 2px;
+  font-size: 1vw;
+  font-style: normal;
+}
+
+
+
+
+/* ==================================================================================================================== */
+
+.hero4 {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* background-color: #f5f1eb; */
+}
+
+.hero4 h1 {
+  width: 60%;
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 5px;
+  font-size: 2.5vw;
+  text-align: center;
+  font-style: normal;
+}
+
+.hero4 h3 {
+  width: 100%;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 1vw;
+  font-style: normal;
+  text-align: center;
+}
+
+.hero4 .course-card-div {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: snow;
+  padding: 1%;
+}
+
+.hero4 .course-card-div .course-card {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: ghostwhite;
+  justify-content: space-between;
+  top: 0%;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero4 .course-card-div .course-card img {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  margin-top: 0;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.4s;
+}
+
+.hero4 .course-card-div .course-card img:hover {
+  transform: scale(1.1);
+}
+
+.hero4 .course-card-div .course-card .course-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 50%;
+  margin-left: 5%;
+  justify-content: space-evenly;
+}
+
+.hero4 .course-card-div .course-card .course-info .stars {
+  position: relative;
+  font-size: 1.5vmax;
+
+}
+
+.hero4 .course-card-div .course-card .course-info .stars i {
+  color: goldenrod;
+  fill: goldenrod;
+}
+
+.hero4 .course-card-div .course-card h3 {
+  position: relative;
+  width: max-content;
+  text-align: left;
+  background: #00908620;
+  color: #009087;
+  border-radius: 20px;
+  padding: 1%;
+  margin-left: 1%;
+}
+
+.hero4 .course-card-div .course-card h1 {
+  position: relative;
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 1.2vmax;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 1%;
+}
+
+.hero4 .course-card-div .course-card h1 span {
+  color: #ee4962;
+  margin-left: 1%;
+}
+
+.hero4 button {
+  position: relative;
+  margin-top: 5vh;
+  width: 15%;
+  height: 3vmax;
+  /* background-color:#ee4962; */
+  border-radius: 5px;
+  color: ivory;
+  fill: ivory;
+  border: none;
+  font-size: 1vmax;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(120deg, #f4123f, #fbd13b);
+  background-size: 200%;
+  background-position: left;
+  transition: background-position ease 0.5s;
+}
+
+.hero4 button i {
+  color: ivory;
+  fill: ivory;
+  font-size: 1vmax;
+  margin-left: 1%;
+}
+
+.hero4 button:hover {
+  /* background: linear-gradient(120deg, #5D0E41, #FF204E); */
+  background-position: right;
+}
+
+
+/* ========================================================================================================== */
+
+.hero5 {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  padding-left: 6%;
+  padding-right: 6%;
+  align-items: center;
+  background-color: snow;
+  justify-content: space-around;
+}
+
+.hero5 .records {
+  position: relative;
+  width: 20%;
+  height: max-content;
+  /* height: 40%; */
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+}
+
+.hero5 .records h1 {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 2.5vw;
+  text-align: center;
+  font-style: normal;
+  color: inherit;
+}
+
+.hero5 .records h2 {
+  text-decoration: none;
+  text-align: center;
+  font-weight: 450;
+  font-size: 1.2vmax;
+  color: #171717;
+}
+
+.hero5 .records:nth-child(1) {
+  background-color: rgba(220, 20, 60, 0.2);
+  color: rgba(220, 20, 60);
+}
+
+.hero5 .records:nth-child(2) {
+  background-color: rgba(68, 97, 228, 0.2);
+  color: rgba(68, 97, 228);
+
+}
+
+.hero5 .records:nth-child(3) {
+  background-color: rgba(248, 183, 32, 0.2);
+  color: rgba(248, 183, 32);
+}
+
+.hero5 .records:nth-child(4) {
+  background-color: rgb(143, 87, 255, .2);
+  color: #8f57ff;
+}
+
+/* ======================================================================================================================= */
+
+.hero6 {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(250, 235, 215, 0.479);
+}
+
+.hero6 h3 {
+  width: 100%;
+  font-weight: 350;
+  margin-top: 2%;
+  letter-spacing: 2px;
+  font-size: 1.2vw;
+  font-style: normal;
+  text-align: center;
+  color: #171717;
+}
+
+
+.hero6 h1 {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2vh;
+  font-size: 2.8vw;
+  letter-spacing: 2px;
+  color: #171717;
+}
+
+.hero6 .artical-div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 95%;
+  height: 100%;
+  /* background-color: red; */
+}
+
+.hero6 .artical-div .artical {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: antiquewhite; */
+  width: 22%;
+  border: none;
+  border-radius: 20px;
+  height: 98%;
+}
+
+.hero6 .artical-div .artical img {
+  position: relative;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  height: 90%;
+  /* background-size: contain; */
+}
+
+.hero6 .artical-div .artical .a-desc {
+  position: absolute;
+  width: 90%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  bottom: 1%;
+  background-color: rgba(245, 245, 245, 0.8);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+.hero6 .artical-div .artical .a-desc h4 {
+  position: relative;
+  width: 100%;
+  font-weight: 300;
+  font-size: 1vw;
+  font-style: normal;
+  text-align: left;
+}
+
+.hero6 .artical-div .artical .a-desc h3 {
+  position: relative;
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.1vw;
+  font-style: normal;
+  text-align: left;
+}
+
+.hero6 .artical-div .artical .a-desc i {
+  position: relative;
+  /* width: 10%; */
+  font-weight: 300;
+  font-size: 1.5vw;
+  font-style: normal;
+  text-align: left;
+}
+
+.hero6 .artical-div .artical .a-desc div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================================About========================================================= */
+
+.about-main {
+  position: relative;
+  background-color: snow;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #373B44 !important;
+}
+
+.about-main .first {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  /* background-color: #009087;*/
+  /* background-color: rgba(37, 37, 53);  */
+  background-color: rgba(26, 183, 157, 0.106);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-main .first h1 {
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+  font-weight: 600;
+  text-align: center;
+  /* margin-bottom: 2vh; */
+  font-size: 3vw;
+  letter-spacing: 2px;
+  /* color: #00b392; */
+  /* color: rgb(21, 21, 27); */
+  color: #373B44;
+}
+
+.about-main .second {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-color: snow;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-main .second .s-left {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-around;
+  /* gap: 5%; */
+  background-color: #ee49621b;
+  padding: 0% 2% 0% 5%;
+}
+
+
+.about-main .second .s-left h2 {
+  width: 80%;
+  font-weight: 700;
+  text-align: left;
+  font-size: 2.8vw;
+  color: rgb(21, 21, 27)
+}
+
+
+.about-main .second .s-left h4 {
+  width: 80%;
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.4vw;
+  text-align: justify;
+  color: rgb(17, 17, 17)
+}
+
+.about-main .second .s-right {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.about-main .second .s-right img {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  background-size: contain;
+  border: 1px solid chocolate;
+  /* padding: 2%; */
+  border-radius: 20px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.about-main .third {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(248, 244, 236 , 0.5);
+}
+
+
+
+.about-main .third .t-left {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.about-main .third .t-left img {
+  width: 100%;
+  height: 100%;
+}
+
+.about-main .third .t-right{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-main .third .t-right h2{
+  width: 80%;
+  font-weight: 700;
+  text-align: left;
+  font-size: 2.8vw;
+  color: rgb(21, 21, 27)
+}
+
+.about-main .third .t-right h4 {
+  width: 80%;
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.4vw;
+  text-align: justify;
+  color: rgb(17, 17, 17)
+}
+
+.about-main .four{
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items:left;
+  padding-left: 5%;
+  justify-content: space-around;
+  background-color: ivory;
+}
+
+
+.about-main .four h2{
+  width: 80%;
+  font-weight: 700;
+  text-align: left;
+  font-size: 2.8vw;
+  color: #373B44
+}
+
+.about-main .four h4 {
+  width: 60%;
+  font-weight: 300;
+  text-align: left;
+  font-size: 1.4vw;
+  text-align: justify;
+  /* color: rgb(17, 17, 17) */
+  color: #373B44;
+}
+
+
+
+/* CSS */
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 1vw;
+  border: 0;
+  width: 40%;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+
+
+/* ===================================================== Courses Section Starts Here ======================================= */
+
+.courses-page{
+  position: relative;
+  width: 100%;
+  height: max-content;
+  /* background-color: ivory; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.courses-page .first{
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: snow;
+}
+
+.courses-page .first h1{
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+  /* background-color: rgba(253, 253, 203, 0.3); */
+  font-size: 3vw;
+  color: rgb(5,0,46)
+}
+
+.courses-page .first .course-div{
+  position: relative;
+  width: 90%;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: snow;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5%;
+  padding: 2% 1% 2% 1%;
+}
+
+.courses-page .course-div .course-card {
+  position: relative;
+  width: 20%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  /* background-color: ghostwhite; */
+  background-color: rgba(253, 253, 203, 0.2);
+  /* background-color: rgb(5,0,46); */
+  justify-content: space-between;
+  top: 0%;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.courses-page .course-div .course-card img {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  margin-top: 0;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.4s;
+}
+
+.courses-page .course-div .course-card .course-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 50%;
+  margin-left: 5%;
+  justify-content: space-evenly;
+  /* padding:5% 0% 10% 0%; */
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+
+
+.courses-page .course-div .course-card .course-info .stars {
+  position: relative;
+  font-size: 1.2vmax;
+
+}
+
+.courses-page .course-div .course-card .course-info .stars i {
+  color: rgb(255, 197, 52);
+  fill: goldenrod;
+}
+
+.courses-page .course-div .course-card h3 {
+  position: relative;
+  width: max-content;
+  text-align: left;
+  background: #00908620;
+  color: #009087;
+  border-radius: 20px;
+  font-size: 0.8vw;
+  padding: 1%;
+  margin-left: 1%;
+}
+
+.courses-page .course-div  .course-card h1 {
+  position: relative;
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 1.2vmax;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 1%;
+  /* color: snow; */
+  background-color: inherit;
+}
+
+.courses-page .course-div .course-card h1 span {
+  color: #ee4962;
+  margin-left: 1%;
+}
+
+
+.courses-page .course-div .course-card .course-info .addtocart{
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  height: 20%;
+  width: 40%;
+  align-self:last baseline;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.8vw;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(238, 73, 98);
+  transition: all ease 0.2s;
+  /* color: rgb(21, 21, 27); */
+}
+
+
+.searchBox {
+  position: relative;
+  margin: 3% 0% 2% 0%;
+  display: flex;
+  width: 50vw;
+  height: 6.5vh;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  /* background: #2f3640; */
+  background: rgb(5,0,46);
+  border-radius: 50px;
+  position: relative;
+}
+
+.searchButton {
+  color: white;
+  position: absolute;
+  right: 0.2%;
+  width: 6%;
+  height: 98%;
+  border-radius: 50%;
+  background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+  border: 0;
+  display: inline-block;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+/*hover effect*/
+button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+  transform: translateY(-3px);
+}
+/*button pressing effect*/
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 1vw;
+  padding: 24px 46px 24px 26px;
+}
+
+
+/* ======================================================================================================================== */
+
+.CoursePage{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: rgb(139, 242, 139); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.CoursePage .top{
+  position: relative;
+  width: 100%;
+  height: 60%;
+  background-color: #aaaaaa;
+  padding: 5%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2%;
+}

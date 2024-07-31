@@ -1,0 +1,114 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    /* z-index: -99; */
+}
+
+.room_main{
+    position: relative;
+    width: 100%;
+    height: 88vh;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    /* z-index: -11; */
+    align-items: center;
+}
+
+.room_main h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 2.5vw;
+    font-style: normal;
+    font-family: inherit;
+}
+
+.room_main #page{
+    position: relative;
+    margin-top: 15%;
+}
+
+.room_main #h3{
+    position: relative;
+    width: max-content;
+    height: max-content;
+    border: none;
+    border-radius: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+#callup {
+    position: absolute;
+    bottom: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 100%;
+    /* z-index: 0; */
+    border: none;
+    background-color: #30C04F;
+  }
+  
+  #callup:hover {
+    background-color: #2bac47;
+  }
+
+.room_main h2{
+    position: absolute;
+    bottom: 30%;
+    text-align: center;
+    font-size: 1.5vw;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-style: normal;
+    font-family: inherit;
+}
+
+.room_main .remoteStream {
+    position: absolute;
+    width: 48vw;
+    height: 88%;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* overflow: hidden; */
+}
+
+.room_main .react-player {
+    background-color: rgb(57, 57, 57);
+    border: 10px solid rgb(220, 220, 220);
+  }
+
+.room_main .myStream{
+    position: absolute;
+    width: 20vw;
+    height: 30%;
+    /* border-radius: 50%; */
+    left: 5%;
+    bottom: 0%;
+    z-index: 1;
+    background-color: rgb(57, 57, 57);
+    border: 10px solid rgb(220, 220, 220);
+
+}
+
+.room_main .endcall{
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6vw;
+    height: 6vw;
+    /* border-radius: 100%; */
+    font-weight: 500;
+    right: 16%;
+    font-size: 1vw;
+    border: none;
+    background-color: #b10303;
+}
